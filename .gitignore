@@ -6,3 +6,4 @@ sad people.jpeg
 logs/train
 logs/validation
 models/image_classification.h5
+.DS_Store
