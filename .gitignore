@@ -1,0 +1,8 @@
+.venv
+data/happy
+data/sad
+happy people.jpeg
+sad people.jpeg
+logs/train
+logs/validation
+models/image_classification.h5
