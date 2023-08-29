@@ -1,28 +1,53 @@
-# Image Classification Project
+# Image Classification with TensorFlow and Flask
 
-This project is about classifying images into two categories: Happy or Sad. The project uses a Convolutional Neural Network (CNN) model built with TensorFlow and Keras.
+This project involves training a deep learning model using TensorFlow to classify images into two categories: "happy" and "sad". A Flask server is provided to serve the model, allowing for easy testing of the model through a simple HTML interface.
+
+## Table of Contents
+
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Data Preprocessing](#data-preprocessing)
+- [Model Training](#model-training)
+- [Flask Server](#flask-server)
+- [Testing the Model](#testing-the-model)
+
+## Prerequisites
+
+- TensorFlow
+- OpenCV
+- Matplotlib
+- Flask (if you want to run the server)
 
 ## Installation
 
-Clone the repository and navigate to the project directory. Install the necessary packages by running:
+To install the required libraries, run:
 
 ```bash
-pip install tensorflow opencv-python matplotlib
+pip install tensorflow opencv-python matplotlib flask
 ```
 
-## Usage
+## Data Preprocessing
 
-The main script is `Image classification.ipynb`. You can run it in a Jupyter notebook.
+The data preprocessing step involves:
 
-The script performs the following steps:
+- Loading image data from the `data` directory.
+- Checking for valid image extensions: jpg, jpeg, png, bmp.
+- Scaling the image data for the neural network.
+- Splitting the data into training, validation, and test sets.
 
-1. Imports necessary libraries.
-2. Loads and preprocesses the image data.
-3. Builds and trains a CNN model on the training data.
-4. Evaluates the model's performance on the test data.
-5. Tests the model on a new image.
-6. Saves the trained model.
+## Model Training
 
-## Contributing
+A sequential deep learning model is built using TensorFlow. The model is trained on the preprocessed data. After training, the performance of the model can be visualized using metrics like loss and validation loss.
 
-Contributions are welcome. Please submit a PR if you have any improvements or fixes.
+## Flask Server
+
+In your terminal just run `app.py` to start the flask server
+
+## Testing the Model
+
+Before passing an image to the neural network for prediction:
+
+- Ensure the image is 256 pixels high and 256 pixels wide.
+- Ensure the image has 3 channels.
+
+The prediction will classify the image as either "Happy image" or "Sad image".
